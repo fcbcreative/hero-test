@@ -1,0 +1,231 @@
+<html>
+<head>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link id="lob-css" href="residential.css" rel="stylesheet" />
+    <meta name=viewport content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"/>
+<style>
+  body {
+    background-color: #EBEFF0;
+  }
+
+  /*
+
+  Notes
+  - No modifications to external stylesheets - only font paths were updated
+  - No inline styles
+  - Internal stylesheet only holds style for relevant markup
+  - Only use styles that have browser support - verified with caniuse.com
+  - Maintain existing container and content pod structure
+  - Keep variable content in the DOM
+
+   */
+
+  /* Both heroes--------------------------*/
+	.container {
+    padding-top: 50px;
+		max-width: 1600px;
+	}
+	.two-panel-hero {
+		margin-bottom: 20px;
+    min-height: 350px;
+    max-width: 1580px;
+	}
+  .btn-primary {
+    width: 100%;
+    max-width: 300px;
+    min-width: 0px;
+    }
+  /* Hero 1-------------------------------*/
+  .gradientBkg h2 {
+    color: #ffffff;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    color:#ffffff;
+  }
+	.gradientBkg {
+		background-image: url("arc-only.png"), linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,154,224,1) 0%, rgba(0,168,70,1) 100%);
+		background-repeat: no-repeat;
+		background-position: bottom 0px right 0px;
+		border-radius: 4px;
+    padding: 10px 0px 0px 0px;
+	}
+  .deviceImg {
+    text-align:center;
+    padding: 20px 10% 20px 10%;
+  }
+  .deviceImg img {
+    width: 100%;
+    max-width: 460px;
+    }
+  @media (min-width: 576px) {
+    .deviceImg {
+      padding: 20px 10% 10px 10%;
+    }
+	}
+  @media (min-width: 768px) {
+    .gradientBkg {
+      padding:  0px 0px 0px 0px;
+    }
+    .deviceImg {
+      text-align:none;
+      padding: 0px 0% 0px 0%;
+      position:relative;
+      top: 10px;
+      left:0;
+    }
+	}
+  /* Hero 2-------------------------------*/
+  .whiteBkg {
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+  .whiteBkg h2, .whiteBkg p {
+    color: #202020;
+  }
+  .irisImg {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+
+  .irisContent img {
+    border-radius: 50%;
+  }
+  @media (max-width: 767px) {
+    .whiteBkg {
+      padding-top: 10px;
+    }
+    .irisImg {
+      height: 0;
+      overflow: hidden;
+      padding-top: 70%;
+      position: relative;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    .irisContentPod {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .irisContainer {
+      position: relative;
+      top: 3%;
+      left: -5%;
+      width: 110%;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .irisContainer:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+      background-image: url("iris-background.svg");
+      background-repeat: no-repeat;
+    }
+    .irisContent {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .irisContent img {
+      width: 80%;
+      padding-top: 10%;
+      }
+    }
+  @media (min-width: 560px) and (max-width: 767px) {
+    .irisImg {
+      height: 380px;
+      padding-top: 0%;
+    }
+    .irisContainer {
+      top: 0%;
+      left: 0%;
+      width: 90%;
+      max-width: 500px;
+    }
+  }
+  @media (min-width: 768px) {
+    .irisContainer {
+      position: relative;
+      padding-left: 20%;
+      min-height: 350px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      }
+    .irisContainer:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 115%;
+      padding-bottom: 115%;
+      background-image: url(iris-background.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .irisContent {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+    .irisContent img {
+      width: 85%;
+      }
+}
+@media (min-width: 768px) and (max-width: 868px) {
+    .irisContainer {
+      padding-left: 32%;
+      }
+    .irisContent img {
+      width: 95%;
+      }
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row two-panel-hero gradientBkg">
+			<div class="col-md-7 align-self-center">
+				<div class="col-md-10 offset-md-1">
+					<div class="hero-content">
+            <p class="eyebrow"><strong>SEO Headline</strong></p>
+						<h2>Vestibulum aliquam lorem libero.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 align-self-center deviceImg">
+				<img src="device-only-large.png">
+			</div>
+		</div>
+		<div class="row two-panel-hero whiteBkg">
+			<div class="col-md-6 align-self-center">
+				<div class="col-md-11 offset-md-1">
+					<div class="hero-content">
+						<p class="eyebrow"><strong>SEO Headline</strong></p>
+						<h2>Vestibulum aliquam lorem libero.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 align-self-center irisImg">
+        <div class="irisContentPod">
+          <div class="irisContainer">
+            <div class="irisContent">
+              <img src="iris-jump-full.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+	</div>
+</body>
+</html>
